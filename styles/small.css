@@ -102,10 +102,6 @@ main {
 h1, h2 {
     color: var(--primary-color);
     text-decoration: underline;
-}
-
-main h1,
-.card h2 {
     text-align: center;
 }
 
@@ -119,9 +115,12 @@ section {
 }
 
 img {
+    display: block;
     max-width: 100%;
     height: auto;
     border-radius: 8px;
+    margin: 0 auto;
+    
 }
 
 /* SECTION COURSES */
