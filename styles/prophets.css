@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Radjani", sans-serif;
+}
+
+header h1 {
+    text-align: center;
+    color: navy;
+    font-family: "Advent";
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: .5rem;
+    padding: 2rem;
+    margin: 0 1rem;
+    background-color: #eee;
+    box-shadow: 0 0 30px #777;
+    border-radius: 4px;
+    
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: .5rem;
+    padding: .5rem;
+    border: 2px solid navy;
+    background: #b59cce;
+    border-radius: 8px;
+    
+}
+
+.card h2  {
+    color: navy;
+    font-family: "Advent";
+    padding: 3px;
+}
+
+.card p {
+    color: #0a0909;
+    padding: 3px;
+}
+
+.card img {
+    width: 100%;
+    max-width: 200px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 0 30px #777;
+    margin-top: 10px;
+}
+
+footer {
+    padding: 2rem;
+    text-align: center;
+    color: navy;
+}
