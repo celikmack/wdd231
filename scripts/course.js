@@ -1,3 +1,4 @@
+// Navigation & Hamburger
 const navbutton = document.querySelector("#ham-btn");
 const navLinks = document.querySelector("#nav-bar");
 
@@ -6,6 +7,8 @@ navbutton.addEventListener("click", () => {
     navLinks.classList.toggle("show");
 })
 
+
+// Current Year & Last Modification
 const spanYear = document.getElementById("currentYear");
 
 const today = new Date();
@@ -16,6 +19,7 @@ spanYear.innerHTML = currentYear;
 const lastModified = document.getElementById("lastModified");
 lastModified.innerHTML = `Last Modification: ${document.lastModified}`;
 
+// Courses Section
 document.addEventListener("DOMContentLoaded", () => {
     const courses = [
         {
@@ -83,6 +87,26 @@ document.addEventListener("DOMContentLoaded", () => {
     const coursesGroup = document.querySelector(".courses");
     const totalCreditsDisplay = document.getElementById("credits");
     const filterBtns = document.querySelectorAll(".btn-filter");
+    const courseDetails = document.querySelector("#course-details");
+
+    // Display course details in the modal
+    function displayCourseDetails(course) {
+        courseDetails.innerHTML = '';
+        courseDetails.innerHTML = `
+            <button id="closeModal">x</button>
+            <h2>${course.subject} ${course.number}</h2>
+            <h3>${course.title}</h3>
+            <p><strong>Credits</strong>: ${course.credits}</p>
+            <p><strong>Certificate</strong>: ${course.certificate}</p>
+            <p>${course.description}</p>
+            <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+        `;
+        courseDetails.showModal();
+        
+        closeModal.addEventListener("click", () => {
+            courseDetails.close();
+        });
+    }
 
     // Create course element
     function createCourseElement(course) {
@@ -97,6 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return courseElement;
     }
 
+    // Courses Filter
     function displayCourses(filter = "all") {
         let accumulatedCredits = 0;
         coursesGroup.innerHTML = "";
@@ -106,6 +131,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 const courseElement = createCourseElement(course);
                 coursesGroup.appendChild(courseElement);
                 
+                // Event listener to open modal when clicking a course
+                courseElement.addEventListener('click', () => {
+                    displayCourseDetails(course);
+                });
+
                 // Only add credits if the course is completed
                 if (course.completed) {
                     accumulatedCredits += course.credits;

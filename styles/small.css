@@ -158,16 +158,44 @@ img {
     display: block;
     background-color: var(--text-dark);
     color: var(--card-bg);
-    
     text-align: center;
     border-radius: 6px;
     font-weight: 500;
+    cursor: pointer;
 }
 
 .course-item-highlight {
     background-color: var(--primary-color);
     color: var(--accent-color);
     border: 1px solid var(--accent-color);
+}
+
+/* Modal Dialog */
+dialog {
+  border: 1px solid rgb(0 0 0 / 10%);
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: var(--accent-color);
+  box-shadow: 0 0 3rem #777;
+  width: 90%;
+  max-width: 600px;
+}
+
+dialog h3, 
+dialog p {
+    color: var(--primary-color);
+}
+
+::backdrop {
+  background-color: rgb(0 0 0 / 50%);
+}
+
+#closeModal {
+    float: right;
+    font-size: 1.5rem;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 8px;
+    box-shadow: 0 0 10px #aaa;
 }
 
 /* Credits */
