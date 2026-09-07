@@ -1,0 +1,67 @@
+[
+  {
+    "name": "Subway",
+    "address": "Pça. Dr. Gualberto Dantas Fontes, 170, Candeias, Bahia - 43805-090",
+    "phone": "(71) 3515-0135",
+    "url": "www.subway.com.br",
+    "image": "subway.webp",
+    "membership_level": "Gold",
+    "services": "Subway is the largest chain of 'subway' sandwiches in the world."
+  },
+  {
+    "name": "Hospital Biosphera",
+    "address": "BA 522 - Viaduto Nova Brasília, s/n, Candeias, Bahia - 43805-000",
+    "phone": "(71) 3605-7150",
+    "url": "//www.biospherasaude.com.br",
+    "image": "biosphera.webp",
+    "membership_level": "Gold",
+    "services": "One of the largest hospitals in Candeias and the surrounding region, offering over 70 specialties and exams."
+  },
+  {
+    "name": "Petróleo Brasileiro S.A. Petrobras",
+    "address": "Rodovia Ba-522 - Km 11 Zona Rural, Candeias, Bahia - 43805-000",
+    "phone": "(71) 3176-3700",
+    "url": "www.petrobras.com.br",
+    "image": "mosaic.webp",
+    "membership_level": "Gold",
+    "services": "Semi-public Brazilian multinational corporation in the petroleum industry."
+  },  
+  {
+    "name": "Casas Bahia",
+    "address": "Rua 13 de Maio, 287, Candeias, Bahia - 43805-000",
+    "phone": "0800 200 4336",
+    "url": "www.casasbahia.com.br",
+    "image": "bahia.webp",
+    "membership_level": "Silver",
+    "services": "Major Brazilian department store offering electronics, furniture, and appliances."
+  },
+  {
+    "name": "Bita Macedo Eletric",
+    "address": "Rua 13 de Maio, 295, Candeias, Bahia - 43805-190",
+    "phone": "(71) 9 9246-6192",
+    "url": "instagram.com/@bitamacedo/",
+    "image": "bita.webp",
+    "membership_level": "Silver",
+    "services": "Electronics Technician specializing in electrical design and installations."
+  },
+  {
+    "name": "Espaço de Beleza Sidney Cabeleireiros",
+    "address": "Rua 21 de Abril, 888, Candeias, Ba - 43805-000",
+    "phone": "(71) 3605-5446",
+    "url": "www.facebook.com/sidneycabeleireiros",
+    "image": "sidney.webp",
+    "membership_level": "Bronze",
+    "services": "Beauty and Spa"
+  },
+  {
+    "name": "Betinho Delicatessen ",
+    "address": "Pça. Dr. Gualberto Dantas Fontes, 148, Candeias, Bahia, 43805-350",
+    "phone": "(71) 3605-3066",
+    "url": "www.instagram.com.br/betinhodelicatessen82/",
+    "image": "betinho.webp",
+    "membership_level": "Bronze",
+    "services": "Bakery, pastry shop, and snack bar."
+  }
+  
+]
+

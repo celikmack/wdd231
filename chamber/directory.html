@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet Candeias Chamber of Commerce's company members.">
+    <meta name="author" content="Celi Macêdo">
+    <title>Candeias Chamber of Commerce</title>
+    
+    <meta property="og:title" content="Candeias Chamber of Commerce Directory Page.">
+    <meta property="og:description" content="Meet Candeias Chamber of Commerce's company members.">
+    <meta property="og:image" content="images/ba-logo.webp">
+    <meta property="og:url" content="https://celikmack.github.io/wdd231/index.html"> 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/chamber-small.css">
+    <link rel="stylesheet" href="styles/chamber-large.css">
+
+    <script src="scripts/global.js" defer></script>    
+    <script src="scripts/directory.js" defer></script>
+        
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.webp" alt="Chamber of Commerce logo" width="100" height="100">
+        </div>
+
+        
+
+        <button id="ham-btn" class="hamburger" aria-label="Open navigation menu"></button>
+        <nav class="nav-flex">
+            <ul id="navbar" class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html" class="active">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <main>
+        <section>   
+            <h1>Directory</h1>
+            <div class="menu-btn">
+                <button id="grid"><img src="images/grid.svg" alt="grid icon" width="20" height="20"></button>
+                <button id="list"><img src="images/list.svg" alt="list icon" width="20" height="20"></button>
+
+            </div>
+            <div id="direct-cards"></div> 
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="partners">
+            <p><strong>Partners:</strong></p>
+            <ul>
+                <li><a href="https://sebrae.com.br" target="_blank">Sebrae</a></li>
+                <li><a href="https://facebook.com/cdlcandeias" target="_blank">CDL Candeias</a></li>
+            </ul>
+        </div>
+        
+        <div class="info">
+            <p>WDD 231 Class Project <br>Celi Macêdo</p>
+            <p>&copy; <span id="currentYear"></span> Candeias Chamber of Commerce</p>
+            <p><span id="lastModified"></span></p>
+        </div>
+
+        <div class="social">
+            <p><strong>Follow us:</strong></p>
+            <ul>
+                <li><a href="https://github.com" target="_blank"><img src="images/github.svg" alt="Github" width="44" height="44"></a></li>
+                <li><a href="https://facebook.com" target="_blank"><img src="images/facebook.svg" alt="Facebook" width="44" height="44"></a></li>
+                <li><a href="https://x.com" target="_blank"><img src="images/twitter-x.svg" alt="Twitter-X" width="44" height="44"></a></li>
+            </ul>
+        </div>
+    </footer>
+    
+</body>
+</html>
