@@ -1,6 +1,17 @@
-// Fetch JSON and Display Directory Cards 
+// Hamburger Menu and Navigation
+const hambutton = document.querySelector('#ham-btn');
+const navLinks = document.querySelector('#navbar');
+
+if (hambutton && navLinks) {
+  hambutton.addEventListener('click', () => {
+    hambutton.classList.toggle('show');
+    navLinks.classList.toggle('show');
+  });
+}
+
+
 const url = 'data/members.json'; 
-const cardsContainer = document.querySelector('#direct-cards');
+const cardsContainer = document.querySelector('#cards');
 
 async function getCompaniesData() {
     try {
@@ -18,43 +29,36 @@ async function getCompaniesData() {
 function displayCompanies(companies) {
     if (!cardsContainer) return;
     
-    // Clear container first
     cardsContainer.innerHTML = '';
 
-    companies.forEach(company => {
+    companies.forEach((company, index) => {
         let card = document.createElement('section');
         card.classList.add('company-card');
 
+        const loadingAttr = index === 0 ? 'eager' : 'lazy';
+
         card.innerHTML = `
-        <div class="card-header">
             <h2>${company.name}</h2>
-            <span class="membership-badge ${company.membership_level.toLowerCase()}">${company.membership_level}</span>
-        </div>
-        <div class="card-body">
-            <img src="images/${company.image}" alt="${company.name} logo" loading="lazy">
-            <p class="services"><em>${company.services}</em></p>
-            <div class="company-details">
-                <p class="address"><strong>Address: </strong>${company.address}</p>
-                <p class="phone"><strong>Phone: </strong>${company.phone}</p>
+            <div class="card-content">
+                <img src="images/${company.image}" alt="${company.name} logo" width="120" height="60" loading="${loadingAttr}">
+                <p>${company.services}</p>
             </div>
-            <a href="https://${company.url.replace(/^https?:\/\//, '')}" target="_blank" class="website-link">Visit Website &rarr;</a>
-        </div>
-    `;
+            <p><strong>Homepage:</strong> <a href="https://${company.url.replace(/^https?:\/\//, '')}" target="_blank">${company.url}</a></p>
+            <p><strong>Phone:</strong> ${company.phone}</p>
+            <p><strong>Member: <strong> ${company.membership_level}</p>
+        `;
         cardsContainer.appendChild(card);
     });
 }
 
-// Run the fetch function if we are on the directory page
 if (cardsContainer) {
     getCompaniesData();
 }
 
-// Grid and List View Toggle 
-const gridButton = document.querySelector('#grid');
-const listButton = document.querySelector('#list');
+const gridButton = document.querySelector('#grid-screen');
+const listButton = document.querySelector('#list-screen');
 
 if (gridButton && listButton && cardsContainer) {
-    // Default to grid on load
     cardsContainer.classList.add('grid-view');
 
     gridButton.addEventListener('click', () => {
@@ -67,3 +71,15 @@ if (gridButton && listButton && cardsContainer) {
         cardsContainer.classList.remove('grid-view');
     });
 }
+
+// Current year and Last Modified
+
+const spanYear = document.getElementById("currentYear")
+
+const today = new Date()
+const currentYear = today.getFullYear()
+
+spanYear.innerHTML = currentYear
+
+const lastModified = document.getElementById("lastModified")
+lastModified.innerHTML = `Last Modification: ${document.lastModified}`

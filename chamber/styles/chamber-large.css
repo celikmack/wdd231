@@ -1,98 +1,74 @@
-/* Media Query */
-
-/* TABLET */
-   
-@media (min-width: 768px) {
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .navigation {
-    position: static;
-    height: auto;
-    max-height: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    background: none;
-    backdrop-filter: none;
-    box-shadow: none;
-    overflow: visible;
-    z-index: auto;
-  }
-
-  .navigation a {
-    margin: 0 0.3rem;
-    padding: 0.5rem 1.2rem;
-    color: var(--text-dark);
-    font-weight: 600;
-    opacity: 1;
-    visibility: visible;                    
-    transform: none;
-    transition: var(--transition-smooth);
-    border-radius: var(--card-radius);
-  }
-
+@media screen and (min-width: 768px) {
+  /* HEADER - HAMBURGER */
   .hamburger {
     display: none;
   }
 
-  main {
-    max-width: 900px;
-    margin: 3rem auto;
+  .navigation {
+    position: static;
+    max-height: none;
+    box-shadow: none;
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    overflow: visible;
   }
 
-  #direct-cards.grid-view {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
+  .navigation a {
+    transform: none;
+    opacity: 1;
+    font-size: 1.1rem;
+    margin: 0;
+    padding: 0.5rem 1rem;
+  }
+
+  .navigation a:hover,
+  .navigation a:focus {
+    border: none;
+    color: var(--active-color);
+  }
+
+  /* FOOTER */
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 3rem;
+  }
+
+  .location,
+  .social,
+  .student {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  /* DIRECTORY PAGE */
+  body {
+    background-color: var(--text-muted);
+  }
+
+  #cards.grid-view {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #cards.list-view {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #cards.list-view .company-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
     gap: 20px;
   }
 
-  #direct-cards.grid-view section {
-    background: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 24px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  #cards.list-view .company-card h2 {
+    margin-bottom: 0;
   }
 
-  #direct-cards.grid-view img {
-    width: 120px;
-    height: 120px;
-    object-fit: contain;
-    margin-bottom: 1rem;
-  }
-
-  .footer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    gap: 2rem;
-    padding: 2rem;
-  }
-
-  .footer .partners, .social {
-    text-align: center;
-  }
-
-  .footer .partners ul, .social ul {
-    flex-direction: column;
-    align-items: center;
-    gap: .5rem;
-  }
-
-  .footer .info {
-    text-align: center;
-  }
-}
-
-/*  DESKTOP  */
-@media (min-width: 1024px) {
-  main {
-    max-width: 1200px;
-  }
 }

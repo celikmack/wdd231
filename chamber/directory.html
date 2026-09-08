@@ -18,19 +18,16 @@
     
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/chamber-small.css">
-    <link rel="stylesheet" href="styles/chamber-large.css">
-
-    <script src="scripts/global.js" defer></script>    
+    <link rel="stylesheet" href="styles/chamber-large.css" media="(min-width: 768px)">
+ 
     <script src="scripts/directory.js" defer></script>
         
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="images/logo.webp" alt="Chamber of Commerce logo" width="100" height="100">
+            <img src="images/chamber-logo.webp" alt="Chamber of Commerce logo" width="100" height="100">
         </div>
-
-        
 
         <button id="ham-btn" class="hamburger" aria-label="Open navigation menu"></button>
         <nav class="nav-flex">
@@ -42,45 +39,40 @@
             </ul>
         </nav>
     </header>
-
     
-    <main>
-        <section>   
-            <h1>Directory</h1>
-            <div class="menu-btn">
-                <button id="grid"><img src="images/grid.svg" alt="grid icon" width="20" height="20"></button>
-                <button id="list"><img src="images/list.svg" alt="list icon" width="20" height="20"></button>
+    <main> 
+        <h1>Directory</h1>
+        <div class="menu-btn">
+            <button id="grid-screen"><img src="images/grid.svg" alt="grid icon" width="20" height="20"></button>
+            <button id="list-screen"><img src="images/list.svg" alt="list icon" width="20" height="20"></button>
 
-            </div>
-            <div id="direct-cards"></div> 
-        </section>
+        </div>
+        <div id="cards" class="grid"></div> 
 
     </main>
 
-    <footer class="footer">
-        <div class="partners">
-            <p><strong>Partners:</strong></p>
-            <ul>
-                <li><a href="https://sebrae.com.br" target="_blank">Sebrae</a></li>
-                <li><a href="https://facebook.com/cdlcandeias" target="_blank">CDL Candeias</a></li>
-            </ul>
+     <footer>
+        <div class="location">
+            <p>Candeias Chamber of Commerce</p>
+            <p>Rua 21 de Abril, 43 - Candeias, Bahia</p>
+            <p>ZIP Code: Brazil / 43.805-000</p>
+            <p>Phone: 55 (71) 4321-8765</p>
+            <p>E-mail: ccc@gmail.com.br</p>
         </div>
-        
-        <div class="info">
-            <p>WDD 231 Class Project <br>Celi Macêdo</p>
-            <p>&copy; <span id="currentYear"></span> Candeias Chamber of Commerce</p>
-            <p><span id="lastModified"></span></p>
-        </div>
-
         <div class="social">
             <p><strong>Follow us:</strong></p>
             <ul>
-                <li><a href="https://github.com" target="_blank"><img src="images/github.svg" alt="Github" width="44" height="44"></a></li>
+                <li><a href="https://linkedin.com" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn" width="50" height="50"></a></li>
                 <li><a href="https://facebook.com" target="_blank"><img src="images/facebook.svg" alt="Facebook" width="44" height="44"></a></li>
                 <li><a href="https://x.com" target="_blank"><img src="images/twitter-x.svg" alt="Twitter-X" width="44" height="44"></a></li>
             </ul>
         </div>
-    </footer>
+        <div class="student">
+            <p>WDD 231 Class Project <br>Celi Macêdo de São José</p>
+            <p>&copy; <span id="currentYear"></span> Candeias Chamber of Commerce</p>
+            <p><span id="lastModified"></span></p>
+        </div>
+ </footer>
     
 </body>
 </html>
