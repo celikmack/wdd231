@@ -8,17 +8,12 @@
     --card-radius: 8px;
     --text-dark: #1e293b;
     --text-light: #ffffff;
-    --link-color: #2563eb;
     --text-muted: #64748b;
 
     --bg-main: #ffffff;
     --bg-subtle: #f8fafc;
     --bg-interactive: #e2e2e2;
     --active-color: #d56b1f;
-    
-    --gold-bg: #f1d256;
-    --silver-bg: #d7d9db;
-    --bronze-bg: #f2cd9d;
 
     --font-headings: "Montserrat", sans-serif;
     --font-body: "Open Sans", sans-serif;
@@ -111,14 +106,8 @@ header .logo img {
  opacity: 0;
 }
 
-.navigation a:hover,
-.navigation a:focus {
- color: var(--active-color);
- border: 1px solid var(--text-muted);
-}
-
 .navigation a.active {
- background-color: var(--active-color);
+ background-color: var(--text-muted);
  color: var(--text-light);
  font-weight: 700;
  text-decoration: none;

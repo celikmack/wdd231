@@ -25,8 +25,9 @@
 
   .navigation a:hover,
   .navigation a:focus {
-    border: none;
-    color: var(--active-color);
+    color: var(--text-muted);
+    border: 2px solid var(--text-muted);
+    border-radius: var(--card-radius);
   }
 
   /* FOOTER */
