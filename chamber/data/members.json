@@ -6,7 +6,7 @@
     "url": "www.petrobras.com.br",
     "image": "petrobras.svg",
     "membership_level": "Gold",
-    "services": "Semi-public Brazilian multinational corporation in the petroleum industry."
+    "services": "Semi-public Brazilian multinational corporation in the petroleum and gas industry."
   },  
   {
     "name": "Biosphera Hospital",
@@ -42,16 +42,16 @@
     "url": "instagram.com/@bitamacedo/",
     "image": "bita.svg",
     "membership_level": "Silver",
-    "services": "Electronics Technician specializing in electrical design and installations."
+    "services": "Electronics technician specializing in electrical design and installations for homes, hotels, and commercial shops."
   },
   {
-    "name": "Espaço de Beleza Sidney Cabeleireiros",
+    "name": "Espaço de Beleza Sidney",
     "address": "Rua 21 de Abril, 888, Candeias, Ba - 43805-000",
     "phone": "(71) 3605-5446",
     "url": "www.facebook.com/sidneycabeleireiros",
     "image": "sidney.svg",
     "membership_level": "Bronze",
-    "services": "Beauty and Spa"
+    "services": "Specialist in hair and makeup for debutantes and bridal days, offering personalized and elegant styling services."
   },
   {
     "name": "Betinho Delicatessen ",
@@ -60,7 +60,7 @@
     "url": "www.instagram.com.br/betinhodelicatessen82/",
     "image": "betinho.svg",
     "membership_level": "Bronze",
-    "services": "Bakery, pastry shop, and snack bar."
+    "services": "Pioneer bakery, pastry shop, and snack bar in the city, offering traditional fresh baked goods and treats."
   }
   
 ]

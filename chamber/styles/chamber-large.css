@@ -23,12 +23,15 @@
     padding: 0.5rem 1rem;
   }
 
-  .navigation a:hover,
-  .navigation a:focus {
-    color: var(--text-muted);
-    border: 2px solid var(--text-muted);
+  .navigation a:hover {
+    background-color: var(--active-color);
+    color: var(--text-light);
     border-radius: var(--card-radius);
   }
+
+  .navigation a.active:hover {
+  transform: scale(1.05);
+}
 
   /* FOOTER */
   footer {
@@ -60,16 +63,20 @@
   }
 
   #cards.list-view .company-card {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 2fr 2.5fr 2fr 1.5fr 1fr; 
     align-items: center;
-    justify-content: space-between;
     padding: 16px 24px;
     gap: 20px;
   }
 
   #cards.list-view .company-card h2 {
     margin-bottom: 0;
+  }
+
+  #cards.list-view .company-card img,
+  #cards.list-view .company-card .card-image {
+    display: none;
   }
 
 }

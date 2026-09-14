@@ -43,9 +43,11 @@ function displayCompanies(companies) {
                 <img src="images/${company.image}" alt="${company.name} logo" width="120" height="60" loading="${loadingAttr}">
                 <p>${company.services}</p>
             </div>
-            <p><strong>Homepage:</strong> <a href="https://${company.url.replace(/^https?:\/\//, '')}" target="_blank">${company.url}</a></p>
-            <p><strong>Phone:</strong> ${company.phone}</p>
-            <p><strong>Member: <strong> ${company.membership_level}</p>
+            <div class="info">
+                <p><strong>Homepage:</strong> <a href="https://${company.url.replace(/^https?:\/\//, '')}" target="_blank">${company.url}</a></p>
+                <p><strong>Phone:</strong> ${company.phone}</p>
+                <p><strong>Member: <strong> ${company.membership_level}</p>
+            </div>
         `;
         cardsContainer.appendChild(card);
     });
