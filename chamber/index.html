@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chamber of Commerce of Candeias - A website to ...">
+    <meta name="author" content="Celi Macêdo">
+    <title>Homepage - Chamber of Commerce</title>
+    
+    <meta property="og:title" content="Candeias Chamber of Commerce Homepage.">
+    <meta property="og:description" content="...">
+    <meta property="og:image" content="https://celikmack.github.io/wdd231/chamber/images/hero.webp">
+    <meta property="og:url" content="https://celikmack.github.io/wdd231/chamber/index.html"> 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/chamber-small.css">
+    <link rel="stylesheet" href="styles/chamber-large.css" media="(min-width: 768px)">
+ 
+    <script src="scripts/global.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlight.js" defer></script>
+        
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/chamber-logo.webp" alt="Chamber of Commerce logo" width="100" height="100">
+        </div>
+
+        <button id="ham-btn" class="hamburger" aria-label="Open navigation menu"></button>
+        <nav class="nav-flex">
+            <ul id="navbar" class="navigation">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="directory.html" >Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main> 
+        <section class="hero">
+            <picture>
+                <source media="(max-width: 649px)" srcset="images/hero-small.webp">
+                <source media="(max-width: 979px)" srcset="images/hero-medium.webp">
+                <img src="images/banner.webp" class="bg-image" alt="Aerial view of Porto de Aratu industrial terminal and cargo ship" loading="lazy">
+            </picture>
+            <h1>Candeias Chamber of Commerce</h1>
+            <p>Uniting Businesses. Building Futures.</p>
+            <div class="cat-btn">
+                <a href="join.html" class="cta-btn">Join Us!</a>
+            </div>
+        </section>
+
+        <section class="events">
+            
+            <div class="forecast">
+                <h2 id="town"></h2>
+            
+                <div class="forecast-flex">
+                    
+                    <!-- Day 1 Forecast -->
+                    <div class="forecast-day">
+                        <h3 id="date1"></h3>
+                        <img id="graphic1" src="" alt="">
+                        <p id="description1"></p>
+                        <p id="temperature1"></p>
+                        <p id="humidity1"></p>
+                    </div>
+
+                     <!-- Day 2 Forecast -->
+                    <div class="forecast-day">
+                        <h3 id="date2"></h3>
+                        <img id="graphic2" src="" alt="">
+                        <p id="description2"></p>
+                        <p id="temperature2"></p>
+                        <p id="humidity2"></p>
+                    </div>
+
+                    <!-- Day 3 Forecast -->
+                    <div class="forecast-day">
+                        <h3 id="date3"></h3>
+                        <img id="graphic3" src="" alt="">
+                        <p id="description3"></p>
+                        <p id="temperature3"></p>
+                        <p id="humidity3"></p>
+                    </div>
+                </div>    
+            </div>
+            
+            <div class="calendar">
+                <h2>Calendar of Events</h2>
+            
+
+                <div class="child-1">
+                    <h3>More Competitive Business |<br>Credit Lines in Practice</h3>
+                    <p>Learn about the key requirements to keep your business compliant and secure.</p>
+                    <p><span>Category: </span> Congress</p>
+                    <p><span>Date: </span> October 26, 2026</p>
+                    <p><span>Time: </span> 08:00 am</p>
+                    <p><span>Location: </span> Candeias Convention Center</p>
+                    <p><span>Cost: </span> Free</p>
+                    <p><span>Registration: </span> 71 8765-4321</p>
+                </div>
+
+                <div class="child-2">
+                    <h3>Learn How to Be an Enterpeneur |<br>Be Your Boss</h3>
+                    <p>Discover the key characteristics an entrepreneur should possess and learn the fundamentals of entrepreneurship, marketing, and finance.</p>
+                    <p><span>Category: </span> Course</p>
+                    <p><span>Duration: </span> 16 hours</p>
+                    <p><span>Location: </span> Online</p>
+                    <p><span>Cost: </span> Free</p>
+                    <p><span>Registration: </span> <a href="www.sebrae.com/br">SEBRAE/Courses</a></p>
+                </div>
+
+                <div class="child-3">
+                    <h3>Acelen - Power Plant |<br>Social and Environmental Programs </h3>
+                    <p>We support the development of the communities where we operate, strengthening initiatives that generate positive impact and real transformation in these areas. Submit your project or program.</p> 
+                    <p><span>Category: </span> Social Responsibility</p>
+                    <p><span>Location: </span>RLAM Refinery</p>
+                    
+                    <p><span>Registration: </span><a href="https://www.acelen.com.br/incentiva/">Acelen/Incentiva</a></p>
+                </div>    
+
+                <div class="child-4">
+                    <h3>Recôncavo Museum |<br>Grand Reopening</h3>
+                    <p>More than just an exhibition space, the museum returns as a place of critical memory, education,</p>
+                    <p><span>Category: </span> Culture</p>
+                    <p><span>Date: </span> Wednesday to Sunday</p>
+                    <p><span>Time: </span> 10:00 am to 5:00 pm</p>
+                    <p><span>Location: </span>Caboto Cove - Candeias</p>
+                    <p><span>Entrance: </span> Free</p>
+                    <p><span>Virtual Tour: </span><a href="https://www.museudoreconcavobaiano.com.br/indexWP.aspx#tour">Visit website</a></p>
+                </div>    
+            </div>        
+        </section>
+
+        <section class="members-partners">
+            <section class="spotlight">
+                <h2>Business Spotlight</h2>
+
+            </section>
+
+            <section class="partners">
+                <h2>Our Partners</h2>
+                <a href="https://www.fieb.org.br" target="_blank" rel="noopener noreferrer">
+                    <img src="images/fieb.webp" alt="FIEB logo" width="90">
+                </a>
+                <a href="https://www.sebrae.com.br" target="_blank" rel="noopener noreferrer">
+                    <img src="images/sebrae.webp" alt="SEBRAE logo" width="90">
+                </a>
+                <a href="https://www.acelen.com" target="_blank" rel="noopener noreferrer">
+                    <img src="images/acelen.webp" alt="ACELEN logo" width="90">
+                </a>
+                <a href="https://prefeitura.candeias.ba.gov.br" target="_blank" rel="noopener noreferrer">
+                    <img src="images/prefeitura-logo.webp" alt="Candeias City Hall" width="90">
+                </a>
+                <a href="https://www.facebook.com/cdlcandeias/?locale=pt_BR" target="_blank" rel="noopener noreferrer">
+                    <img src="images/cdl.webp" alt="CDL Candeias logo" width="90">
+                </a>
+                <a href="https://www.sescbahia.com.br" target="_blank" rel="noopener noreferrer">
+                    <img src="images/sesc.webp" alt="SESC logo" width="90">
+                </a>
+            </section>
+        </section>    
+
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="partners-link">
+                <p><strong>Partners:</strong></p>
+                <ul>
+                    <li><a href="https://fieb.org.br" target="_blank">FIEB</a></li>
+                    <li><a href="https://sebrae.com.br" target="_blank">SEBRAE</a></li>
+                    <li><a href="https://www.acelen.com" target="_blank">ACELEN</a></li>
+                    <li> <a href="https://prefeitura.candeias.ba.gov.br" target="_blank">CANDEIAS CITY HALL</a> </li>
+                    <li><a href="https://facebook.com/cdlcandeias" target="_blank">CDL CANDEIAS</a></li>
+                    <li><a href="https://www.ba.senac.br" target="_blank">SENAC</a></li>
+                </ul>
+            </div>
+            
+            <div class="contact">
+                <p><strong>Contact Us:</strong></p>
+                <p><a href="join.html">Join</a></p>
+                <p>Email: ccc@gmail.com</p>
+                <p>Phone: 55 (71) 4321-8765</p>
+            </div>
+            
+            <div class="social">
+                <p><strong>Follow us:</strong></p>
+                <ul>
+                    <li><a href="https://linkedin.com" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn" width="45" height="45"></a></li>
+                    <li><a href="https://facebook.com" target="_blank"><img src="images/facebook.svg" alt="Facebook" width="44" height="44"></a></li>
+                    <li><a href="https://x.com" target="_blank"><img src="images/twitter-x.svg" alt="Twitter-X" width="44" height="44"></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="student-info">
+            <p>WDD 231 Class Project <br>Celi Macêdo de São José</p>
+            <p>&copy; <span id="currentYear"></span> Candeias Chamber of Commerce</p>
+            <p><span id="lastModified"></span></p>
+        </div>
+    </footer>
+    
+</body>
+</html>
