@@ -311,6 +311,7 @@ main h1 {
  background-color: var(--bg-subtle);  
  border-left: 4px solid var(--active-color);    
  border-radius: var(--card-radius);   
+ text-overflow: ellipsis;
  overflow: hidden;
 }
 
