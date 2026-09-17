@@ -3,39 +3,23 @@
 // Path to the local members data source
 const url = 'data/members.json'; 
 
-// Get randomly 2 gold or silver members
+// Get randomly 2 members from the combined Gold OR Silver tiers
 async function getSpotlights() {
     try { 
-        // Fetch data from the json file
         const response = await fetch(url);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const companies = await response.json();
         
-        const goldCompanies = companies.filter(company => {
+        const eligibleCompanies = companies.filter(company => {
             const level = company.membershipLevel || company.membership || company.membership_level; 
-            return level === "Gold";
+            return level === "Gold" || level === "Silver";
         });
 
-        const silverCompanies = companies.filter(company => {
-            const level = company.membershipLevel || company.membership || company.membership_level; 
-            return level === "Silver";
-        });
+        eligibleCompanies.sort(() => 0.5 - Math.random());
 
-        let chosenPool = [];
-        const randomTier = Math.random() < 0.5 ? goldCompanies : silverCompanies;
-        
-        if (randomTier.length >= 2) {
-            chosenPool = randomTier;
-        } else {
-            chosenPool = goldCompanies.length >= 2 ? goldCompanies : silverCompanies;
-        }
-
-        chosenPool.sort(() => 0.5 - Math.random());
-
-        const selectedCompanies = chosenPool.slice(0, 2);
-
+        const selectedCompanies = eligibleCompanies.slice(0, 2);
         displaySpotlights(selectedCompanies);
 
     } catch (error) {
@@ -47,6 +31,9 @@ async function getSpotlights() {
 function displaySpotlights(companies) {
     const container = document.querySelector('.spotlight');
     if (!container) return;
+
+    // Clear previous cards to prevent duplication on re-load
+    container.innerHTML = '';
 
     companies.forEach(company => {
         const card = document.createElement('div');
