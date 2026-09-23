@@ -10,7 +10,6 @@
     position: static;
     max-height: none;
     box-shadow: none;
-    background: transparent;
     display: flex;
     flex-direction: row;
     gap: 1.5rem;
@@ -29,6 +28,7 @@
     border: 2px solid var(--text-muted);
     border-radius: var(--card-radius);
   }
+  
   /* FOOTER */
   footer {
     padding: 3rem 3rem 2rem;
@@ -53,11 +53,13 @@
   body {
     background-color: var(--text-muted);
   }
+  main h1 {
+    color: var(--text-light);
+  }
   #cards.grid-view {
     grid-template-columns: repeat(3, 1fr);
   }
   #cards.list-view {
-    display: flex;
     flex-direction: column;
   }
   #cards.list-view .company-card {
@@ -79,7 +81,7 @@
   .hero img {
     height: 100%;
     object-fit: cover;
-    object-position: 50% 50%;
+    object-position: center;
   }
   .hero h1 {
     top: 5%;
@@ -100,7 +102,6 @@
   }
   .calendar {
     grid-template-columns: repeat(2, 1fr);
-    background: transparent;
   }
   .events, 
   .calendar {
@@ -127,7 +128,21 @@
   .spotlight h2 {
     grid-column: span 2;
   }
-  .partners {
-    grid-template-columns: repeat(2, 1fr);
+  
+  /* JOIN */
+  .level-cards {
+    width: 60%;
+    
   }
+  .level-cards h2,
+  .thankyou p,
+  .results li {
+    color: var(--text-light);
+  }
+  .thankyou a {
+    color: var(--text-light);
+    text-decoration: underline;
+    
+  }
+  
 }
