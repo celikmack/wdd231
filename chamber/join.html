@@ -50,12 +50,12 @@
            
             <form action="thankyou.html" method="get" class="join-form">
                  <h2>Membership Application Form</h2>
-                <label>First Name*<input type="text" name="first-name" title="first-name" autocomplete="given-name" required></label>
-                <label>Last Name*<input type="text" name="last-name" title="last-name" autocomplete="family-name" required></label>
-                <label>Organization Title*<input type="text" name="org-title" title="Title in Organization" placeholder="HR Manager" pattern="[A-Za-z\s-]{7,}" autocomplete="organization-title" required></label>                
-                <label>E-mail*<input type="email" name="email" title="Email Address" placeholder="yourname@domain.com" autocomplete="email" required></label>                
-                <label>Phone*<input type="tel" name="phone" title="Phone Number" placeholder="00 9 1234-5678" autocomplete="tel" required></label>                
-                <label>Organization Name*<input type="text" name="org-name" title="Your Organization" autocomplete="organization" required></label>               
+                <label>First Name*<input type="text" name="first-name" title="Your first name" autocomplete="given-name" required></label>
+                <label>Last Name*<input type="text" name="last-name" title="Your last name" autocomplete="family-name" required></label>
+                <label>Organization Title*<input type="text" name="title" title="Minimum 7 characters (letters, spaces, hyphens only)" placeholder="HR Manager" pattern="[A-Za-z\s\-]{7,}" autocomplete="organization-title" required></label>                
+                <label>E-mail*<input type="email" name="email" title="Your Email Address" placeholder="yourname@domain.com" autocomplete="email" required></label>                
+                <label>Phone*<input type="tel" name="phone" title="Your Phone Number" placeholder="00 9 1234-5678" autocomplete="tel" required></label>                
+                <label>Organization Name*<input type="text" name="org-name" title="Your Organization" autocomplete="organization" required></label>                
                 <label>Membership Level*
                     <select name="membership-level" id="membership-level" title="Membership Level" required>
                         <option value="" disabled selected>Select a Level...</option>
