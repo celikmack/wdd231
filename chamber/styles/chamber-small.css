@@ -261,7 +261,8 @@ main h1 {
 }
 
 .company-card,
-.card-content img {
+.card-content img,
+#card-places div {
   box-shadow: var(--box-shadow);
 }
 
@@ -277,7 +278,8 @@ main h1 {
   border-radius: var(--card-radius);   
 }
 
-.company-card h2 {
+.company-card h2,
+#card-places div h2 {
   font-family: var(--font-headings);
   font-size: 1.2rem;
   text-align: left;
@@ -348,7 +350,6 @@ main h1 {
 }
 
 /* INDEX */
-
 /* HERO SECTION */
 .hero {
     position: relative;
@@ -385,12 +386,14 @@ main h1 {
 
 .hero .cta-btn,
 .join-btn,
-.open-btn {
+.open-btn,
+.disc-open-btn,
+.closeBtn {
     display: block;
     background-color: var(--btn-color);
     font-family: var(--font-headings);
     color: var(--text-light);
-    font-size: .9rem;
+    font-size: 1rem;
     font-weight: bold;
     border: none;
     border-radius: var(--card-radius);
@@ -403,7 +406,9 @@ main h1 {
     transform: translateX(-50%) scale(1.1);
 }
 .join-btn:hover,
-.open-btn:hover {
+.open-btn:hover,
+.disc-open-btn:hover,
+.closeBtn:hover {
     transform: scale(1.1);
 }
 
@@ -487,9 +492,7 @@ main h1 {
 .calendar h2 {
     grid-column: 1 /-1; 
     font-size: 1.5rem;
-    
     font-weight: 600;
-    
 }
 
 .calendar h3 {
@@ -680,14 +683,19 @@ main h1 {
   font-size: 1rem;
 }
 
-.open-btn {
-  background-color: var(--text-light);
-  color: var(--btn-color);
-  width: 50%;
+.open-btn,
+.disc-open-btn,
+.closeBtn {
+  width: 30%;
   max-width: 200px;
   margin: 0 auto;
   padding: .5rem;
   margin-bottom: 1rem;
+}
+
+.open-btn {
+  background-color: var(--text-light);
+  color: var(--btn-color);
 }
 
 
@@ -712,10 +720,10 @@ dialog {
   padding-bottom: 12px;
 }
 
+.modal-header h2,
 .modal-header h3 {
   font-size: 1.2rem;
   color: var(--btn-color);
- 
 }
 
 dialog p {
@@ -782,4 +790,64 @@ color: var(--btn-color);
 .thankyou a:hover {
 text-decoration: none;
 }
+
+
+/* DISCOVER PAGE */
+/* MODAL */
+#visit p {
+  text-align: center;
+  font-size: 1.3rem;
+}
+ /* CARDS */
+#card-places div {
+  margin: 1rem 8px;
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  background-color: var(--bg-subtle);
+  display: grid;
+  grid-template-areas: 
+  "name"
+  "photo"
+  "description"
+  "location"
+  "button";
+}  
+
+#card-places div h2 {
+  grid-area: name;
+  color: var(--btn-color);
+  text-align: center;
+  margin: 1rem;
+
+}
+
+#card-places div img {
+  grid-area: photo;
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  border-radius: var(--card-radius);
+  box-shadow: var(--box-shadow);
+  
+}
+
+#card-places div p {
+  grid-area: description;
+  font-size: 1rem;
+  margin: 1rem 10px .5rem;
+}
+
+#card-places div address {
+  grid-area: location;
+  font-size: .9rem;
+  text-align: center;
+  margin: .5rem 10px 1rem;
+}
+
+.disc-open-btn {
+  grid-area: button;
+}
+
 

@@ -1,7 +1,7 @@
 /* CHAMBER OF COMMERCE PROJECT */
 
 /* MEDIA QUERY */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 641px) {
   /* HEADER - HAMBURGER */
   .hamburger {
     display: none;
@@ -28,7 +28,6 @@
     border: 2px solid var(--text-muted);
     border-radius: var(--card-radius);
   }
-  
   /* FOOTER */
   footer {
     padding: 3rem 3rem 2rem;
@@ -73,7 +72,7 @@
   #cards.list-view .company-card h2 {
     margin-bottom: 0;
   } 
-  /* INDEX */
+  /* INDEX PAGE*/
   .hero {
     height: 380px;
   }
@@ -128,21 +127,45 @@
   .spotlight h2 {
     grid-column: span 2;
   }
-  
-  /* JOIN */
+  /* JOIN PAGE*/
   .level-cards {
     width: 60%;
-    
   }
   .level-cards h2,
   .thankyou p,
   .results li {
     color: var(--text-light);
   }
+  /* THANK YOU PAGE*/
   .thankyou a {
     color: var(--text-light);
     text-decoration: underline;
-    
   }
-  
+  /* DISCOVER PAGE*/
+  #card-places div {
+    grid-template-areas: 
+    "name name"
+    "photo description"
+    "photo description"
+    "photo location"
+    "button button";
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }  
+  #card-places div img {
+    margin-left: 5px;
+  }
+  #card-places div:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 9);
+  }
+  .disc-open-btn {
+    margin-top: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  #card-places {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
