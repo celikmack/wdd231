@@ -1,0 +1,415 @@
+/* PAGE VARIABLES */
+
+:root {
+    --hero-green: #009c3b;
+    --globe-blue: #002776;
+
+    --card-text: #4a5568;
+    --card-heading: #2d3748;
+    --error-color: #c0392b;
+
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --about-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+    --border-green: 1.5px solid #52b788; 
+    --border-light: #e2e8f0;
+    --border-neutral: #cbd5e0;
+}
+
+/* HERO CONTAINERr */
+.hero-container {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    height: 180px;
+    margin: 1.5rem auto;
+    background-color: var(--hero-green);
+    border: var(--border-green);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.flag {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.cta-btn {
+    position: absolute;
+    bottom: .5rem;
+    left: 1rem;
+    font-size: .7rem;
+    z-index: 10;
+}
+
+/* YELLOW DIAMOND */
+.diamond {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 280px;
+    height: 130px;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+/* GLOBE */
+.globe-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 2;
+    background-color: var(--globe-blue);
+    border: var(--border-blue);
+}
+
+/* SLIDING TRACK */
+.globe-track {
+    display: flex;
+    width: max-content;
+    height: 100%;
+    animation: spinGlobe 15s linear infinite;
+}
+
+.globe-track img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    flex-shrink: 0;
+}
+
+/* GLOBE OVERLAY */
+.globe-overlay {
+    position: absolute;
+    z-index: 10;
+}
+
+/* HERO HEADING */
+.hero-heading {
+    position: relative; 
+    height: 4.5rem;     
+    max-width: 100%;
+    margin: 1rem auto;
+    font-size: 2rem;    
+    text-align: center;
+    overflow: hidden;   
+}
+
+.hero-heading span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    color: var(--bg-text);
+    transform: scale(0.7);
+    transform-origin: center;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+.hero-heading .animated-text:nth-child(1) { 
+    animation: phraseOne 12s forwards;
+}
+
+.hero-heading .animated-text:nth-child(2) { 
+    animation: phraseTwo 12s forwards;
+}
+
+.hero-heading .animated-text:nth-child(3) { 
+    animation: phraseThree 12s forwards;
+}
+
+.hero-heading .brand-text {
+    animation: brandReveal 12s forwards;
+    margin-bottom: 5rem;
+    font-family: var(--brend-font);
+    font-size: 3.5rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    color: var(--bg-text);
+}
+
+/* ANIMATIONS */
+@keyframes spinGlobe {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes phraseOne {
+    0%,
+    100% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    4%,
+    21% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    25% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+@keyframes phraseTwo {
+    0%,
+    25%,
+    100% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    29%,
+    46% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+@keyframes phraseThree {
+    0%,
+    50%,
+    100% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    54%,
+    71% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    75% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+@keyframes brandReveal {
+    0%,
+    75% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    79%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* CARDS */
+.interactive {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 0 1rem;
+}
+
+.api-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    background-color: var(--bg-text);
+    border: var(--border-green);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card-header {
+    width: 100%;
+    padding: .5rem;
+    text-align: center;
+    color: var(--bg-text);
+    font-family: var(--heading-font);
+    background-color: var(--accent-color);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    padding: 20px;
+    font-family: var(--body-font);
+    text-align: left;
+}
+ /* WILDLIFE CURIOSITY */
+.api-card img {
+    width: 80%;
+    height: 140px;
+    object-fit: cover;
+    margin: 15px;
+    border: var(--border-green);
+    border-radius: 6px;
+}
+
+.api-card > p {
+    padding: 1.25rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    text-align: left;
+    font-family: var(--body-font);
+}
+
+/* ECO-ACTION PLEDGE */
+.pledge-list {
+    margin-left: 20px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.pledge-count-text {
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.pledge-action-btn {
+    margin-top: 5px;
+    width: 100%;
+}
+
+/* QUIZ */
+.quiz-options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.quiz-question {
+    margin-bottom: 8px;
+    text-align: left;
+    font-weight: 500;
+}
+
+.quiz-option {
+    padding: 8px 12px;
+    text-align: left;
+    font-size: .9rem;
+    background: var(--bg-text);
+    border: 1px solid var(--border-neutral);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#quiz-feedback {
+    margin-top: 2.5rem;
+    font-size: 1.1rem;
+}
+
+.pledged-btn {
+    background-color: var(--hero-green);
+    color: var(--bg-text);
+    cursor: not-allowed;
+}
+
+/* ABOUT US*/
+.about {
+    max-width: 100%;
+    margin: 2rem 1rem;
+    text-align: center;
+    overflow: hidden;
+    background-color: var(--bg-text);
+    border: var(--border-green);
+    border-radius: 8px;
+}
+
+.about p {
+    padding: 0 1rem .9rem;
+    margin-bottom: 1.25rem;
+    text-align: left;
+    line-height: 1.6;
+    font-size: .9rem;
+    font-family: var(--body-font);
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.about p:first-of-type {
+    padding-top: 1.5rem ;
+}
+
+.about a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.about a:hover {
+    text-decoration: underline;
+}
+
+/* TABLET & DESKTOP */
+@media (min-width: 768px) {
+    .hero-container {
+        max-width: 1000px;
+        height: 320px;
+    }
+    .cta-btn {
+        font-size: 1rem;
+    }
+    .diamond {
+        width: auto;
+        height: auto;
+    }
+    .globe-circle,
+    .globe-track img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+    }
+    .hero-heading {
+        max-width: 850px;
+        height: 4.5rem;
+        margin: 1rem auto;
+        font-size: 2.5rem;
+    }
+    .hero-heading .brand-text {
+        margin-bottom: 1rem;
+    }
+    .interactive {
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 1000px;
+        margin: 40px auto;
+    }
+    .api-card {
+        flex: 1;
+    }
+    .about {
+        max-width: 1000px;
+        margin: 4rem auto;
+    }
+
+    .about-btn {
+        width: 50%;
+    }
+}

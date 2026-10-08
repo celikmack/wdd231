@@ -7,7 +7,6 @@
 :root {
   --text-headings: #2d6a4f;
   --text-color: #333;
-  --text-font1: 'Fraunces', serif;
   --text-font: 'Plus Jakarta Sans', sans-serif;
 }
 
@@ -27,9 +26,6 @@ body {
   padding: 1rem;  
 }
 
-.header h1 {
-  font-family: var(--text-font1);
-}
 footer {
   font-size: 0.9rem;
 }
@@ -73,7 +69,7 @@ footer {
 
 .card h2 {
   font-size: 1.4rem;
-  font-family: var(--text-font1);
+  font-family: 'Fraunces', serif;
   border-bottom: 2px solid var(--text-headings);
   padding-bottom: 0.3rem;
   margin-bottom: 1rem;
@@ -178,8 +174,8 @@ footer {
 }
 
 /* Typography Classes */
-.type1 h2, .type1 p { font-family: var(--text-font1) }
-.type2 h2, .type2 p { font-family: var(--text-font) }
+.type1 h2, .type1 p { font-family: 'Fraunces', serif; }
+.type2 h2, .type2 p { font-family: 'Plus Jakarta Sans', sans-serif; }
 .type3 h2, .type3 p { 
   font-family: 'Taprom', sans-serif;
 font-size: 2rem; }

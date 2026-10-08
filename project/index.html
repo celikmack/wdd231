@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Brazil Wild takes you to an amazing virtual safari, and teaches you how to protect the Brazilian fauna!">
+    <meta name="author" content="Celi Macêdo">
+    <title>Home Page</title>
+
+    <!-- Social Media Meta -->
+    <meta property="og:title" content="Website for a NGO - Brazil Wild, developed as a final project course by Celi Macêdo">
+    <meta property="og:description" content="Brazil Wild takes you to an amazing virtual safari, and teaches you how to protect the Brazilian fauna!">
+    <meta property="og:image" content="https://celikmack.github.io/wdd231/project/images/logo.webp">
+    <meta property="og:url" content="https://celikmack.github.io/wdd231/project/index.html"> 
+
+    <!-- Google Fonts Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Taprom&display=swap" rel="stylesheet">
+
+    <!-- Styles and Scripts External Links -->
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/index.css">
+    
+    <script src="scripts/global.js" defer></script>
+    <script src="scripts/index.js" defer></script>
+       
+</head>
+
+<body>
+    <!-- Background image -->
+    <div class="body-bg">
+        <img src="images/bg-leaves.webp" class="bg-leaves" alt="A backgorund with multiple types of leaves." aria-hidden="true">
+    </div>
+    
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="images/logo-wb.webp" alt="Wild Brazil logo" width="100" height="100">
+        </div>
+        
+        </div>
+
+        <button id="ham-btn" class="hamburger" aria-label="Open navigation menu"></button>
+        <nav class="nav-flex">
+            <ul id="navbar" class="navigation">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="animals.html" >Animals</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Main Content-->
+    <main>
+        <!-- Hero Section -->
+        <h1 class="hero-heading">
+            <span class="animated-text">Meet to love</span>
+            <span class="animated-text">Love to protect</span>
+            <span class="animated-text">Protect to preserve</span>
+            <span class="brand-text">Wild Brazil</span>
+        </h1>
+
+        <!-- Banner -->
+        <div class="hero-container">
+            <div class="flag">
+                <a href="animals.html" class="cta-btn">Meet the Animals!</a>
+                <svg class="diamond" width="540" height="260" viewBox="0 0 540 260">
+                    <polygon points="270,5 535,130 270,255 5,130" fill="#ffb703" stroke="#fff9c4" stroke-width="1" />
+                </svg>
+                <div class="globe-circle">
+                    <div class="globe-track">
+                        <!-- Images for banner animation -->
+                        <div class="globe-item"><img src="images/arara-azul.webp" alt="Arara Azul"></div>
+                    <div class="globe-item"><img src="images/mico-leao-dourado.webp" alt="Mico Leão Dourado"></div>
+                    <div class="globe-item"><img src="images/poraque.webp" alt="Pirarara"></div>
+                    <div class="globe-item"><img src="images/tucano.webp" alt="Tucano"></div>
+                    <div class="globe-item"><img src="images/anaconda-verde.webp" alt="Tamanduá Bandeira"></div>
+                    <div class="globe-item"><img src="images/lobo-guara.webp" alt="Onça Pintada"></div>
+                    
+                    <div class="globe-item"><img src="images/arara-azul.webp" alt="Arara Azul"></div>
+                    <div class="globe-item"><img src="images/mico-leao-dourado.webp" alt="Mico Leão Dourado"></div>
+                    <div class="globe-item"><img src="images/poraque.webp" alt="Pirarara"></div>
+                    <div class="globe-item"><img src="images/tucano.webp" alt="Tucano"></div>
+                    <div class="globe-item"><img src="images/anaconda-verde.webp" alt="Tamanduá Bandeira"></div>
+                    <div class="globe-item"><img src="images/lobo-guara.webp" alt="Onça Pintada"></div>
+                </div>
+                    <div class="globe-overlay"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Live APIs section --> 
+        <div class="interactive">
+            <!-- Wildlife Curiosity -->
+            <div class="api-card">
+                <div class="card-header">
+                    <h2>Wildlife Curiosity</h2>
+                    <p class="subtitle">Did you know...</p>
+                </div>
+                <img src="images/boto.webp" alt="Amazon River Dolphin swimming in the river" class="card-image">
+                <p><strong>Boto's Secret:</strong> Unlike ocean dolphins, Amazon River Dolphins have unfused neck vertebrae, allowing them to turn their heads 180 degrees to weave through flooded trees!</p>
+            </div>
+            <!-- Eco-Action Pledge -->
+            <div class="api-card" id="pledge-card">
+                <div class="card-header">
+                    <h2>Eco-Action Pledge</h2>
+                    <p class="subtitle">Make a Difference Today</p>
+                </div>
+                <div class="card-body">
+                    <p class="desc"><strong>Why Pledge?</strong> Stand with Wild Brazil to protect regional biomes through grassroots action:</p>
+                    <ul class="pledge-list">
+                        <li>Reduce single-use plastics in daily routines</li>
+                        <li>Support local river and forest cleanup drives</li>
+                        <li>Spread awareness on regional conservation</li>
+                    </ul>
+                    <p id="pledge-count" class="desc pledge-count-text">Current community pledges: 128</p>
+                    <button id="pledge-btn" class="quiz-option pledge-action-btn">I Pledge Today! 🌱</button>
+                </div>
+            </div>
+            <!-- Wildlife Quiz -->
+            <div class="api-card" id="quiz">
+                <h2>Wildlife Quiz</h2>
+                
+            </div>
+
+            
+        </div>
+
+        <!-- About Us Section-->
+        <div class="about">
+            <div class="card-header">
+                <h2>Know Wild Brazil...</h2>
+            </div>
+            <p>We are a young and dynamic NGO, located in Bahia - Brazil, dedicated to protecting Brazil's unique biodiversity through direct conservation, community education, and the active fight against animal mistreatment and illegal wildlife trafficking. We believe that safeguarding our wildlife starts with raising awareness, protecting vulnerable species, and stopping exploitation.</p>
+            <p>As an independent organisation, we rely heavily on community support. Your donation is vital to keeping our rescue operations and educational programmes active, protecting threatened habitats, and securing a future for our wildlife.</p>
+            <p class="desc">
+                We also believe in the power of collective action, working closely alongside other non-governmental organisations like 
+                <a href="https://www.wwf.org" target="_blank" rel="noopener">WWF</a>, 
+                <a href="https://www.renctas.org.br" target="_blank" rel="noopener">RENCTAS</a>, 
+                <a href="https://www.tamar.org.br" target="_blank" rel="noopener">Projeto Tamar</a>, and 
+                <a href="https://institutofaunabrasil.org.br/" target="_blank" rel="noopener">Instituto Fauna Brasil</a> 
+                to maximise our impact on the ground.
+            </p>
+        </div>
+
+    </main>
+
+    <!-- Footer-->
+    <footer>
+        <div class="social">
+            <a href="https://facebook.com/" target="_blank" aria-label="Facebook"><img src="images/facebook.svg" alt="Facebook" width="16" height="16"></a>
+            <a href="https://youtube.com/" target="_blank" aria-label="YouTube"><img src="images/youtube.svg" alt="YouTube" width="16" height="16"></a>
+            <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn"><img src="images/LinkedIn.svg" alt="Twitter-X" width="16" height="16"></a>
+            <a href="https://x.com/" target="_blank" aria-label="Twitter-X"><img src="images/twitter-x.svg" alt="Twitter-X" width="16" height="16"></a>
+        </div>
+        <p>&copy 2026🪸 Celi Macêdo 🪸 Brazil</p>
+        <!-- Local Storage / Visit Counter-->
+        <p class="visit-counter">Page Visits: <span id="visits">0</span></p>
+    </footer>
+    
+</body>
+</html>

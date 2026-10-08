@@ -1,0 +1,175 @@
+/* PAGE VARIABLES */
+:root {
+    --form-bg: #f9f9f9;
+    --input-border: #ccc;
+
+    --focus-green: #009c3b;
+    --focus-glow: rgba(0, 156, 59, 0.2);
+
+    --results-bg: #f8f9fa;
+    --results-border: #e2e8f0;
+    --results-text: #4a5568;
+    --results-heading: #2d3748;
+
+    --thankyou-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/*FORMS LAYOUT */
+.forms {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.forms h2,
+.donation h3 {
+    font-family: var(--heading-font);
+    color: var(--accent-color);
+}
+
+.forms h2 {
+    text-align: center;
+}
+
+.donation h3 {
+    font-size: 1rem;
+}
+
+/* FORM CONTAINERS */
+.contact,
+.donation {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+    background-color: var(--form-bg);
+    border: var(--border-green);
+    border-radius: 4px;
+}
+
+/*FORM ELEMENTS */
+.contact label,
+.donation label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    font-family: var(--heading-font);
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.contact input,
+.contact select,
+.contact textarea,
+.donation input,
+.donation select {
+    padding: 0.6rem;
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    font-family: var(--body-font);
+    font-size: 1rem;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.contact input:focus,
+.contact select:focus,
+.contact textarea:focus,
+.donation input:focus,
+.donation select:focus {
+    outline: none;
+    border-color: var(--focus-green);
+    box-shadow: 0 0 0 3px var(--focus-glow);
+    background-color: var(--bg-text);
+}
+
+/* RADIO GROUPS */
+.radio-group {
+    display: flex;
+    gap: 1.4rem;
+}
+
+.radio-group label {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.2rem;
+    padding-bottom: 1rem;
+}
+
+/*THANK YOU CARD */
+.thankyou-container {
+    max-width: 700px;
+    margin: 3rem auto;
+    padding: 2.5rem;
+    text-align: center;
+    backdrop-filter: blur(4px);
+    background-color: var(--bg-text);
+    border: var(--border-green);
+    border-radius: 12px;
+    box-shadow: var(--thankyou-shadow);
+    font-family: var(--body-font);
+}
+
+.thankyou-container h1 {
+    margin-bottom: 1rem;
+    font-family: var(--heading-font);
+    font-size: 2rem;
+    color: var(--accent-color);
+}
+
+.thankyou p {
+    margin-bottom: 1.5rem;
+
+    color: var(--results-heading);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* RESULTS SECTION */
+.results {
+    margin-top: 1rem;
+    padding: 1rem 1.5rem;
+    text-align: left;
+    background-color: var(--results-bg);
+    border: 1px solid var(--results-border);
+    border-radius: 8px;
+}
+
+.results ul {
+    display: inline-block;
+    margin: 0;
+    padding-left: 1.2rem;
+    text-align: left;
+    list-style-type: square;
+}
+
+.results li {
+    margin-bottom: 0.5rem;
+    color: var(--results-text);
+    font-size: 0.95rem;
+}
+
+.thankyou a {
+    color: var(--accent-color);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.thankyou a:hover {
+    text-decoration: none;
+}
+
+/* DESKTOP LAYOUT */
+@media (min-width: 768px) {
+    .forms {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
