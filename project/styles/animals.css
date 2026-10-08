@@ -1,10 +1,4 @@
-/*PAGE VARIABLES */
-:root {
-    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    --modal-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-
-    --modal-overlay: #00000099;
-}
+/*ANIMALS PAGE  */
 
 /* FILTER SECTION */
 .filter-section {
@@ -68,7 +62,6 @@
     background: var(--bg-text);
     border: var(--border-green);
     border-radius: 8px;
-    box-shadow: var(--card-shadow);
 }
 
 /* MODAL */
@@ -82,12 +75,10 @@
     background: var(--bg-text);
     border: var(--border-green);
     border-radius: 8px;
-    box-shadow: var(--modal-shadow);
 }
 
 ::backdrop {
-    background-color: var(--modal-overlay);
-    opacity: 0.6;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 #modal-box h2 {

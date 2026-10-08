@@ -1,19 +1,4 @@
-/* PAGE VARIABLES */
-
-:root {
-    --hero-green: #009c3b;
-    --globe-blue: #002776;
-
-    --card-text: #4a5568;
-    --card-heading: #2d3748;
-    --error-color: #c0392b;
-
-    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    --about-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
- 
-    --border-light: #e2e8f0;
-    --border-neutral: #cbd5e0;
-}
+/* INDEX PAGE */
 
 /* HERO CONTAINERr */
 .hero-container {
@@ -105,7 +90,7 @@
     position: absolute;
     left: 0;
     width: 100%;
-    color: #ffb703;
+    color: var(--bg-text);
     transform: scale(0.7);
     transform-origin: center;
     animation-fill-mode: forwards;
@@ -314,7 +299,7 @@
     text-align: left;
     font-size: .9rem;
     background: var(--bg-text);
-    border: 1px solid var(--border-neutral);
+    border: 1px solid #cbd5e0;
     border-radius: 4px;
     cursor: pointer;
 }

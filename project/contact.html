@@ -56,7 +56,7 @@
 
             <!-- Contact Us Form -->
             <form action="thankyou.html" method="get" class="contact">
-                <h2>Talk to Us!</h2>    
+                <h1>Talk to Us!</h1>    
                 <label>Full Name*<input type="text" name="full-name" title="Full Name" autocomplete="name" required></label>
                 <label>E-mail*<input type="email" name="email" title="Email Address"  autocomplete="email" required></label>             
                 <label>Phone*<input type="tel" name="phone" title="Your Phone Number" autocomplete="tel" required></label>             
@@ -76,9 +76,9 @@
 
             <!-- Donation Form -->
             <form action="thankyou.html" method="get" class="donation">
-                <h2>Support Wild Brazil!</h2>
+                <h1>Support Wild Brazil!</h1>
                 
-                <h3>Frequency:</h3>
+                <h2>Frequency:</h2>
                 <div class="radio-group">
                     <label><input type="radio" id="freq-once" name="frequency" value="one-time" checked /> One time</label>
                     <label><input type="radio" id="freq-monthly" name="frequency" value="monthly" /> Monthly</label>
@@ -90,12 +90,11 @@
                     <label><input type="radio" id="donation2" name="donation" value="donation2" /> $ 25.00</label>
                     <label><input type="radio" id="donation3" name="donation" value="donation3" /> $ 50.00</label>
                 </div>
-                </div>
-                </div>
 
                 <label>Full Name*<input type="text" name="full-name" title="Full Name" autocomplete="name" required></label>
                 <label>Card Type*
                     <select name="card-type" title="Card Type" required>
+                        <option value="" disabled selected>Select a Level...</option>
                         <option value="visa">Visa</option>
                         <option value="mc">Mastercard</option>
                         <option value="amex">American Express</option>                    
