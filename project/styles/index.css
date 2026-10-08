@@ -105,7 +105,7 @@
     position: absolute;
     left: 0;
     width: 100%;
-    color: var(--bg-text);
+    color: #ffb703;
     transform: scale(0.7);
     transform-origin: center;
     animation-fill-mode: forwards;
