@@ -3,8 +3,6 @@
     --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     --modal-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 
-    --border-light: 1.5px solid #52b788;
-
     --modal-overlay: #00000099;
 }
 
@@ -31,7 +29,7 @@
 .filter-btn {
     padding: 0.4rem 1rem;
     background-color: var(--bg-text);
-    border: var(--border-light);
+    border: var(--border-green);
     border-radius: 4px;
     color: var(--accent-color);
     font-family: var(--body-font);
@@ -63,7 +61,7 @@
     flex-direction: column;
     overflow: hidden;
     background: var(--bg-text);
-    border: var(--border-light);
+    border: var(--border-green);
     border-radius: 8px;
     box-shadow: var(--card-shadow);
 }
@@ -77,7 +75,7 @@
     max-width: 550px;
     width: 90%;
     background: var(--bg-text);
-    border: var(--border-light);
+    border: var(--border-green);
     border-radius: 8px;
     box-shadow: var(--modal-shadow);
 }
@@ -178,18 +176,11 @@
         padding: 1.25rem;
     }
     /* Zig-Zag Layout */
-    .card .card-body .thumb {
-        order: 1;
-    }
-    .card .card-body .content {
-        order: 2;
-    }
-    .card-reverse .card-body .thumb {
-        order: 2;
-    }
-    .card-reverse .card-body .content {
-        order: 1;
-    }
+    .card .card-body .thumb { order: 1;}
+    .card .card-body .content { order: 2;}
+    .card-reverse .card-body .thumb {order: 2;}
+    .card-reverse .card-body .content {order: 1;}
+
     .thumb {
         flex: 0 0 280px;
         height: 200px;
@@ -199,9 +190,7 @@
         height: 100%;
         object-fit: cover;
     }
-    .content {
-        flex: 1.2;
-    }
+    .content {flex: 1.2;}
     .title,
     .subtitle {
         text-align: left;

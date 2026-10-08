@@ -22,7 +22,7 @@
 }
 
 /* HEADER & FOOTER BASE */
-header {
+header, footer {
     background-color: var(--bg-text);
     backdrop-filter: blur(1px);
     padding: .2rem 2rem;
@@ -36,17 +36,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-footer {
-    background-color: var(--bg-text);
-    backdrop-filter: blur(1px);
-    padding: .2rem 2rem;
-    border: var(--border-green);
-    border-radius: 8px;
-    max-width: 1000px;
-    margin: 0 auto;
-    z-index: 1000;
 }
 
 /* HAMBURGER */
