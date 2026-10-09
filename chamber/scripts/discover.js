@@ -45,17 +45,20 @@ const modalDescrip = document.querySelector("#disc-modalDescrip");
 const modalCost = document.querySelector("#disc-modalCost");
 
 function displayPlaces(places) {
-    places.forEach(place => {
+    places.forEach((place, index) => {
         const card = document.createElement('div');
 
         const photo = document.createElement('img');
         photo.src = `images/${place.photo_link}`;
         photo.alt = place.name;
-        card.appendChild(photo);
 
-        if (places.indexOf(place) === 0) {
-        photo.setAttribute('fetchpriority', 'high');
+        if (index === 0) {
+            photo.setAttribute('fetchpriority', 'high');
+        } else {
+            photo.setAttribute('loading', 'lazy');
         }
+
+        card.appendChild(photo);
 
         const title = document.createElement('h2');
         title.innerText = place.name;
@@ -72,7 +75,7 @@ function displayPlaces(places) {
         // Read More button
         const button = document.createElement('button');
         button.textContent = 'Read More';
-        button.classList.add('disc-open-btn')
+        button.classList.add('disc-open-btn');
 
         button.addEventListener('click', () => {
             modalTitle.textContent = place.name;
@@ -82,7 +85,6 @@ function displayPlaces(places) {
         });
 
         card.appendChild(button);
-
         displayCards.appendChild(card);
     });
 }
