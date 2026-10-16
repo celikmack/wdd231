@@ -10,14 +10,15 @@
     padding: 1rem;
 }
 
-.forms h1,
+.forms p,
 .donation h2 {
     font-family: var(--heading-font);
     color: var(--accent-color);
 }
 
-.forms h1 {
+.forms p {
     text-align: center;
+    font-size: 1.7rem;
 }
 
 .donation h2 {

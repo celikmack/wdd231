@@ -220,7 +220,6 @@ footer .visit-counter {
 #close-btn,
 .about-btn {
     text-align: center;
-    background-color: var(--btn-main);
     color: var(--bg-text);
     border: none;
     padding: .5rem;
@@ -233,6 +232,15 @@ footer .visit-counter {
     text-decoration: none;
 }
 
+.button,
+#close-btn,
+.about-btn {
+    background-color: var(--btn-main);
+}
+
+.cta-btn {
+    background-color: var(--text-color);
+}
 .button,
 #close-btn {
     display: block;
