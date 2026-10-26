@@ -234,13 +234,11 @@ footer .visit-counter {
 
 .button,
 #close-btn,
-.about-btn {
+.about-btn,
+.cta-btn {
     background-color: var(--btn-main);
 }
 
-.cta-btn {
-    background-color: var(--text-color);
-}
 .button,
 #close-btn {
     display: block;

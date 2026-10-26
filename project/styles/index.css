@@ -90,7 +90,7 @@
     position: absolute;
     left: 0;
     width: 100%;
-    color: var(--text-color);
+    color: var(--bg-text);
     transform: scale(0.7);
     transform-origin: center;
     animation-fill-mode: forwards;
